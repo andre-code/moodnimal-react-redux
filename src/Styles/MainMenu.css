@@ -1,0 +1,110 @@
+/*
+* nav section
+*/
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+}
+nav ul li {
+    list-style-type: none;
+    color: #ccc;
+    float: left;
+    padding-left: 40px;
+}
+nav ul li:nth-child(6) {
+    margin-top: -10px;
+} 
+nav ul li  a {
+    color:#666;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+input[type='checkbox']:checked ~ .container > .menu {
+    background: transparent;
+}
+input[type='checkbox']:checked ~ .container > .menu:before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+input[type='checkbox']:checked ~ .container > .menu:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+.container {
+    width: 50px;
+    height: 70.6666666667px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.menu {
+    height: 2px;
+    width: 2px;
+    background: #fff;
+    transition: 0.3s;
+    position: relative;
+    padding-right: 30px;
+    transform: translateY(33.3333333333px);
+}
+.menu:before {
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    transition: 0.3s;
+    position: absolute;
+    content: '';
+    bottom: 10px;
+}
+.menu:after {
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    transition: 0.3s;
+    position: absolute;
+    content: '';
+    top: 10px;
+}
+
+.menu-ul {
+    display: none;
+}
+.icon-menu-hamburger {
+    display: block;
+}
+nav ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: none;
+    padding-left: 0px;
+}
+nav ul li:hover  {
+    background-color: #ccc;
+}
+input[type='checkbox']:checked ~ .menu-ul {
+    display: block;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+    margin-top: 35px;
+    text-align: center;
+    padding-left: 0px;
+}
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    z-index: 1;
+}
+ul {
+    display: block;
+}
